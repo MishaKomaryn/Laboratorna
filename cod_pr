@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+int main()
+{   int dim=14, i;
+    float array[dim];
+    srand ( time(NULL) );
+    
+    for (int i =0; i<dim; i++){
+        array[i]=100-rand()%200;
+    }
+   
+    return 0;
+}
