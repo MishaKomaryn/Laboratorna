@@ -4,27 +4,51 @@
 
 int main()
 {   int dim=14, i;
-    float array[dim];
+    float x=0, y=1, summin=0, summax=0, n=0, m=0, array[dim];
+                                /* dim- розмір масиву,
+                                summin - сума мінімальних значень
+                                summax - сума максимальних значень
+                                x - середнє значення всіх від'ємних значень, 
+                                y - середнє значень всіх додатніх значень,
+                                n - кількість знайдених від'ємних елементів 
+                                m - кількість знайдених додатніх елементів*/
     srand ( time(NULL) );
-
+    
     for (int i =0; i<dim; i++){
         array[i]=100-rand()%200;
     }
-
+    
     printf("Заданий масив\n");
     i=0;
     while(i<dim){
         printf("Елемент номер[%i] = %.2f\n",i, array[i]);
         i++;
     }
-
+    
+     for (int i =0; i<dim; i++){
+        if(array[i]<0){
+            summin=summin+array[i];
+            n++;
+        }
+    }
+    x=summin/n;
+    
+    for (int i =0; i<dim; i++){
+        if(array[i]>=0){
+            summax=summax+array[i];
+            m++;
+        }
+        
+    }
+    y=summax/m;
+    
       printf("Новоутворений масив\n");
     i=0;
     while(i<dim){
         printf("Елемент номер[%i] = %.2f\n",i, array[i]);
         i++;
     }
-
-
+        
+   
     return 0;
 }
