@@ -6,10 +6,25 @@ int main()
 {   int dim=14, i;
     float array[dim];
     srand ( time(NULL) );
-    
+
     for (int i =0; i<dim; i++){
         array[i]=100-rand()%200;
     }
-   
+
+    printf("Заданий масив\n");
+    i=0;
+    while(i<dim){
+        printf("Елемент номер[%i] = %.2f\n",i, array[i]);
+        i++;
+    }
+
+      printf("Новоутворений масив\n");
+    i=0;
+    while(i<dim){
+        printf("Елемент номер[%i] = %.2f\n",i, array[i]);
+        i++;
+    }
+
+
     return 0;
 }
