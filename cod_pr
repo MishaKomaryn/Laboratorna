@@ -43,11 +43,8 @@ int main()
     y=summax/m;
     
       printf("Новоутворений масив\n");
-    i=0;
-    while(i<dim){
+    for (int i =0; i<dim; i++){
         printf("Елемент номер[%i] = %.2f\n",i, array[i]);
-        i++;
-    }
         
    
     return 0;
